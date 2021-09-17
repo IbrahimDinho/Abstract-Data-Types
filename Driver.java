@@ -25,14 +25,23 @@ public class Driver{
 		// System.out.println(linkedList.get(5));
 		// System.out.println(linkedList.get(6));
 
-		List testList = new ListImpl();
-		testList.append(1);
-		testList.append(2);
-		testList.append(3);
+		// List testList = new ListImpl();
+		// testList.append(1);
+		// testList.append(2);
+		// testList.append(3);
 
-		for(int i=0; i<testList.size(); i++){
-			System.out.println(testList.get(i));
-		}
+		// for(int i=0; i<testList.size(); i++){
+		// 	System.out.println(testList.get(i));
+		// }
+
+		// System.out.println(testList.size());
+		// System.out.println(testList.remove(1));
+		// testList.set(1,20);
+
+		// for(int i=0; i<testList.size(); i++){
+		// 	System.out.println(testList.get(i));
+		// }
+
 
 
 
