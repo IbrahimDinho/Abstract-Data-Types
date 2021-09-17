@@ -42,6 +42,14 @@ public class Driver{
 		// 	System.out.println(testList.get(i));
 		// }
 
+		// Stack stack = new StackImpl();
+		// stack.append(35);
+		// stack.append(2);
+		// System.out.println(stack.size());
+
+		// System.out.println(stack.pop());
+		// System.out.println(stack.pop());
+
 
 
 
