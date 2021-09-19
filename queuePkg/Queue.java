@@ -1,3 +1,4 @@
+package queuePkg;
 // Queue Interface
 public interface Queue{
 
