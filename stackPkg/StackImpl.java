@@ -1,3 +1,4 @@
+package stackPkg;
 //Implementation of stack
 
 public class StackImpl implements Stack{
@@ -6,7 +7,7 @@ public class StackImpl implements Stack{
 	private int index;
 	private final int ARRLENGTH = 10;
 // Java fills unfilled values with zeros.
-	StackImpl(){
+	public StackImpl(){
 		this.index = 0;
 		this.arr = new int[ARRLENGTH];
 

@@ -1,3 +1,4 @@
+package linkedPkg;
 public class LinkedListImpl implements LinkedList {
 	Node head;
 	/*
@@ -172,7 +173,7 @@ class Node {
 	Node next;
 	int data;
 
-	Node(int data){
+	public Node(int data){
 	this.data = data;
 	}
 }

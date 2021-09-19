@@ -6,7 +6,7 @@ public class ListImpl implements List{
 	private int index;
 	private int arr[];
 
-	ListImpl(){
+	public ListImpl(){
 		this.index = 0;
 		this.arr = new int[ARRLENGTH];
 	}

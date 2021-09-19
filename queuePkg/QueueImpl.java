@@ -11,7 +11,7 @@ public class QueueImpl implements Queue{
 	private int size;
 	private int[] arr;
 
-	QueueImpl(){
+	public QueueImpl(){
 		this.arr = new int[ARRLENGTH + 1];
 		getIndex = putIndex = size = 0;
 	}

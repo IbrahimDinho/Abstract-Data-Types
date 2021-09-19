@@ -1,3 +1,4 @@
+package stackPkg;
 //Stack Interface
 public interface Stack{
 	public int pop();
