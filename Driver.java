@@ -1,6 +1,9 @@
 // class to Test DataStructures
 public class Driver{
-	public static void main(String[] args){
+	/*
+		For Queue DEMO throw Exception
+	**/ 
+	public static void main(String[] args) throws Exception{
 		// LinkedList linkedList = new LinkedListImpl();
 		// LinkedListImpl l = new LinkedListImpl();
 		// l.append(5);
@@ -51,6 +54,32 @@ public class Driver{
 		// System.out.println(stack.pop());
 
 
+		Queue q = new QueueImpl();
+		// try{
+		// q.get();
+		// }
+		// catch(QueueEmptyException e){
+		// 	System.out.println(e);
+		// }
+
+		q.put(1);
+		q.put(2);
+		q.put(3);
+		q.put(4); 
+		q.put(5); // Should be full now so resizes.
+		q.put(6);
+
+		System.out.println("size" + q.size());
+		int sizeindex = q.size();
+
+		for(int i=0; i < sizeindex; i++){
+			System.out.println(q.get());
+		}
+		q.get(); // causes an exception
+
+		// while(q.size() !=0){
+		// 	System.out.println(q.get());
+		// }
 
 
 

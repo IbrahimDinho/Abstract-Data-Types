@@ -1,8 +1,8 @@
 // Queue Implementation for a dynamic circular Queue
 
-public class QueueImpl{
+public class QueueImpl implements Queue{
 
-	private final int ARRLENGTH = 10;
+	private final int ARRLENGTH = 4;
 
 	private int getIndex;
 	private int putIndex;
@@ -10,33 +10,39 @@ public class QueueImpl{
 	private int[] arr;
 
 	QueueImpl(){
-		this.length = 0;
-		this.arr = new arr[ARRLENGTH];
-		getIndex = putIndex = 0;
+		this.arr = new int[ARRLENGTH + 1];
+		getIndex = putIndex = size = 0;
 	}
 
-
+	// get from Front of Queue
 	public int get() throws QueueEmptyException{
 		if (getIndex == putIndex){
 			throw new QueueEmptyException();
 		}
 		int value = arr[getIndex++];
-		if (getIndex == arr.length) getIndex = 0; //loop back
+		this.size--;
+		if (getIndex == arr.length){
+			getIndex = 0;
+		} 
 
 		return value;
 
 	}
 
+	// Put data to back of Queue
 	public void put(int data){
 		// if Queue Full then resize
 		// This can occur when underlaying array is full or Put pointer just before get pointer
-		if ((putIndex == arr.length && getIndex == 0) | putIndex == getIndex ){
+		if ((putIndex == arr.length - 1 & getIndex == 0) | putIndex+1 == getIndex ){
 			resize();
 		}
 		arr[putIndex++] = data;
-		// need to be careful here as usually you have +1 empty
+		this.size++;
+	
 		//Loop back once reached end of Queue
-		if(putIndex == arr.length) putIndex = 0;
+		if(putIndex == arr.length){
+			putIndex = 0;
+		}
 
 		return;
 	}

@@ -4,7 +4,7 @@ public class QueueEmptyException extends Exception{
 
 	//@Override
 	public String toString(){
-		return "\nQueue is Empty"
+		return "Queue is Empty";
 	}
 }
 
