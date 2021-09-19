@@ -1,4 +1,4 @@
-package stackPkg;
+package linearpkg.stackPkg;
 //Implementation of stack
 
 public class StackImpl implements Stack{

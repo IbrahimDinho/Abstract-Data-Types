@@ -1,4 +1,4 @@
-package queuePkg;
+package linearpkg.queuePkg;
 
 // A user Defined Exception for Queue Full error
 

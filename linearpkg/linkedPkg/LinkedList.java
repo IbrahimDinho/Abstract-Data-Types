@@ -1,4 +1,4 @@
-package linkedPkg;
+package linearpkg.linkedPkg;
 public interface LinkedList {
 	//Add to end of linkedlist
 	public void append(int data);

@@ -1,4 +1,4 @@
-package queuePkg;
+package linearpkg.queuePkg;
 // Queue Interface
 public interface Queue{
 

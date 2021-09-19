@@ -1,4 +1,4 @@
-package queuePkg;
+package linearpkg.queuePkg;
 
 // Queue Implementation for a dynamic circular Queue
 

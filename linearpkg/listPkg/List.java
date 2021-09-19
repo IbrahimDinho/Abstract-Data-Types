@@ -1,4 +1,4 @@
-package listPkg;
+package linearpkg.listPkg;
 public interface List{
 
 	public int get(int pos);

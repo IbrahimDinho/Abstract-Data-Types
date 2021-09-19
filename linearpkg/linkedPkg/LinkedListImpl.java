@@ -1,4 +1,4 @@
-package linkedPkg;
+package linearpkg.linkedPkg;
 public class LinkedListImpl implements LinkedList {
 	Node head;
 	/*

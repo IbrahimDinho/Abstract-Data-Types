@@ -1,4 +1,4 @@
-package listPkg;
+package linearpkg.listPkg;
 
 public class ListImpl implements List{ 
 
