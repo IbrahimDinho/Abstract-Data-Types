@@ -53,8 +53,12 @@ public class QueueImpl implements Queue{
 		return this.size;
 	}
 
+	public boolean isEmpty(){
+		if (getIndex == putIndex) return true;
+		else 
+			return false;
+	}
 	//resize Queue so its dynamic
-
 	private void resize(){
 		int[] temp = new int[arr.length * 2];
 		for(int i=0; i<arr.length; i++){
