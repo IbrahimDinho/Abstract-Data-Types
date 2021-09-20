@@ -88,8 +88,23 @@ public class Driver{
 		// 	System.out.println(q.get());
 		// }
 
+		System.out.println("Tree Test");
+		Bst binaryTree = new BstImpl();
+		binaryTree.insert(10);
+		binaryTree.insert(9);
+		binaryTree.insert(7);
+		binaryTree.insert(13);
+		binaryTree.insert(11);
+		binaryTree.insert(3);
+		binaryTree.insert(5);
+		binaryTree.insert(20);
+		binaryTree.insert(10);
 
 
+		binaryTree.inOrder();
+		binaryTree.levelOrder();
+		System.out.println("Height of tree:" + binaryTree.heightOfTree());
+		System.out.println("Contains 9" + binaryTree.contains(9));
 
 	}
 }
