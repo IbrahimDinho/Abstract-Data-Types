@@ -17,7 +17,7 @@ public class QueueImpl implements Queue{
 	}
 
 	// get from Front of Queue
-	public int get() throws QueueEmptyException{
+	public synchronized int get() throws QueueEmptyException{
 		if (getIndex == putIndex){
 			throw new QueueEmptyException();
 		}
@@ -32,7 +32,7 @@ public class QueueImpl implements Queue{
 	}
 
 	// Put data to back of Queue
-	public void put(int data){
+	public synchronized void put(int data){
 		// if Queue Full then resize
 		// This can occur when underlaying array is full or Put pointer just before get pointer
 		if ((putIndex == arr.length - 1 & getIndex == 0) | putIndex+1 == getIndex ){
@@ -49,17 +49,17 @@ public class QueueImpl implements Queue{
 		return;
 	}
 
-	public int size(){
+	public synchronized int size(){
 		return this.size;
 	}
 
-	public boolean isEmpty(){
+	public synchronized boolean isEmpty(){
 		if (getIndex == putIndex) return true;
 		else 
 			return false;
 	}
 	//resize Queue so its dynamic
-	private void resize(){
+	private synchronized void resize(){
 		int[] temp = new int[arr.length * 2];
 		for(int i=0; i<arr.length; i++){
 			temp[i] = arr[i];
