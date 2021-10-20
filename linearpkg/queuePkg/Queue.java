@@ -10,4 +10,7 @@ public interface Queue{
 
 	public boolean isEmpty();
 
+	public void printQueue();
+	
+
 }

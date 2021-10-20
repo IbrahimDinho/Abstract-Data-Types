@@ -4,7 +4,7 @@ package linearpkg.queuePkg;
 
 public class QueueImpl implements Queue{
 
-	private final int ARRLENGTH = 4;
+	private final int ARRLENGTH = 15;
 
 	private int getIndex;
 	private int putIndex;
@@ -66,5 +66,24 @@ public class QueueImpl implements Queue{
 		}
 		this.arr = temp;
 
+	}
+
+	public synchronized void printQueue(){
+		int getPointer = getIndex;
+		int putPointer = putIndex;
+		
+		if(getPointer > putPointer){
+			for(int j=0;j<size;j++){
+				if(getPointer == arr.length){
+					getPointer = 0;
+				}
+				System.out.println(arr[getPointer++]);
+			}
+		}
+		else{
+			for(int x=0;x<size;x++){
+				System.out.println(arr[getPointer++]);
+			}
+		}
 	}
 }

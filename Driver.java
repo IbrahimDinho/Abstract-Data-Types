@@ -106,5 +106,47 @@ public class Driver{
 		System.out.println("Height of tree:" + binaryTree.heightOfTree());
 		System.out.println("Contains 9" + binaryTree.contains(9));
 
+		//Test PRINT Queue
+		// Queue qu = new QueueImpl();
+		// qu.put(1);
+		// qu.put(2);
+		// qu.put(3);
+		// qu.put(4);
+		// qu.put(4);
+
+		// qu.printQueue();
+		// qu.printQueue();
+
+
+		// Test Queue for multithreaded use. (Thread safety)
+		QueueImpl queue = new QueueImpl();
+		queue.put(1);
+		queue.put(2);
+		queue.put(3);
+		queue.put(4);
+		queue.put(5);
+		queue.put(10);
+		queue.put(15);
+		queue.put(20);
+		
+
+
+
+		MyThreadQ mt1 = new MyThreadQ("Child 1", queue);
+		MyThreadQ mt2 = new MyThreadQ("Child 2", queue);
+
+
+		try{
+			mt1.thrd.join();
+			mt2.thrd.join();
+		}
+		catch(InterruptedException exc){
+			System.out.println("Main thread interruped");
+		}
+		System.out.println("Main thread going to terminate");
+		queue.printQueue();
+		
+
+
 	}
 }
